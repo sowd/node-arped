@@ -7,7 +7,7 @@ export default class WindowsARP extends ARP {
     }
 
     fetch() {
-        const result = ChildProcess.spawnSync('arp', ['-a']);
+        const result = ChildProcess.spawnSync('ARP.EXE', ['-a']);
         if (result.error) {
             throw error;
         }
