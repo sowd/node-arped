@@ -1,6 +1,6 @@
 import ARPParser from './Parser';
 
-const DeviceRegex = /on (\w+) ifscope/;
+const DeviceRegex = /:[\da-fA-F]{1,2} on (\w+)/;
 
 export default class MacOSParser extends ARPParser {
     constructor() {

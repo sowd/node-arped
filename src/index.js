@@ -16,6 +16,8 @@ export default class Arped {
             }
         } else if (/darwin/.test(process.platform)) {
             this.arpFetcher = new MacOSARP();
+        } else if (/freebsd/.test(process.platform)) {
+            this.arpFetcher = new MacOSARP();
         } else if (/^win/.test(process.platform)) {
             this.arpFetcher = new WindowsARP();
         } else {
@@ -23,6 +25,8 @@ export default class Arped {
         }
 
         if (/darwin/.test(process.platform)) {
+            this.arpParser = new MacOSParser();
+        } else if (/freebsd/.test(process.platform)) {
             this.arpParser = new MacOSParser();
         } else {
             this.arpParser = new ARPParser();
