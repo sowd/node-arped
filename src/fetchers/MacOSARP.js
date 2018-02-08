@@ -9,7 +9,7 @@ export default class MacOSARP extends ARP {
     fetch() {
         const result = ChildProcess.spawnSync('arp', ['-an']);
         if (result.error) {
-            throw error;
+            throw result.error;
         }
         return result.stdout.toString();
     }
