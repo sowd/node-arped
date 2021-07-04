@@ -1,3 +1,9 @@
+node-arped-ext
+
+An extension of dave-irvine's [node-arped](https://github.com/dave-irvine/node-arped).
+
+The original README follows.
+
 node-arped
 ----------
 
